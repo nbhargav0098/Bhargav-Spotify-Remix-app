@@ -1,0 +1,33 @@
+.lists-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+}
+.album-name {
+  color: #fff;
+  font-size: 12px;
+  text-align: left;
+}
+.track-name {
+  color: #fff;
+  font-size: 12px;
+  text-align: left;
+}
+.track-duration {
+  color: #fff;
+  font-size: 12px;
+}
+.track-artists {
+  color: #fff;
+  font-size: 12px;
+  text-align: left;
+}
+.track-added-at {
+  color: #fff;
+  font-size: 12px;
+  text-align: left;
+}
+.track-container {
+  width: 150px;
+}

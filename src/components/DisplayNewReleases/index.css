@@ -1,0 +1,10 @@
+.new-release-song-container {
+  height: 180px;
+  width: 180px;
+  margin: 10px;
+}
+.new-releases-img {
+  height: 180px;
+  width: 180px;
+  border-radius: 10px;
+}

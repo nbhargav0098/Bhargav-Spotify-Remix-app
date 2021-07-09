@@ -1,0 +1,35 @@
+.specific-new-releases-bg-container {
+  background-color: #181818;
+  min-height: 100vh;
+  display: flex;
+}
+.specific-new-releases-content-container {
+  display: column;
+  padding-top: 30px;
+  margin-left: 40px;
+  width: 90%;
+}
+.new-releases-top-part {
+  display: flex;
+  height: 270px;
+}
+.new-releases-poster-props {
+  height: 270px;
+  width: 270px;
+  border-radius: 10px;
+}
+.new-releases-top-sub-part {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  margin-left: 10px;
+}
+.new-releases-title {
+  color: #fff;
+  font-size: 48px;
+  font-weight: 500;
+}
+.new-releases-description {
+  color: #fff;
+  font-size: 16px;
+}

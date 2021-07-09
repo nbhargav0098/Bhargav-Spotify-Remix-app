@@ -1,0 +1,12 @@
+.home-page-bg-container {
+  background-color: #181818;
+  min-height: 100vh;
+  display: flex;
+}
+.homepage-content-container {
+  display: flex;
+  flex-direction: column;
+  padding-top: 50px;
+  margin-left: 70px;
+  width: 85%;
+}

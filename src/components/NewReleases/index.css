@@ -1,0 +1,9 @@
+.new-releases-bg-container {
+  margin-top: 40px;
+}
+
+.new-releases-content-container {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}

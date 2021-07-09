@@ -1,0 +1,9 @@
+.geners-mood-bg-container {
+  margin-top: 40px;
+}
+
+.geners-mood-content-container {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}

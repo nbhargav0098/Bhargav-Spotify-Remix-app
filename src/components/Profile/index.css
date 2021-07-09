@@ -1,0 +1,54 @@
+.profile-bg-container {
+  background-color: #181818;
+  min-height: 100vh;
+  display: flex;
+}
+.profile-content-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 50px;
+  margin-left: 70px;
+  width: 85%;
+  margin-top: 90px;
+}
+.profile-pick {
+  height: 170px;
+  width: 170px;
+}
+.user-name {
+  font-weight: 700;
+  font-size: 38px;
+  color: #fff;
+}
+.followers-playlist-container {
+  display: flex;
+  align-items: center;
+}
+.followers-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.followers-count {
+  color: #1db954;
+  font-size: 20px;
+  font-weight: 700;
+}
+.followers-heading {
+  color: #9b9b9b;
+  font-size: 20px;
+}
+.logout-btn {
+  cursor: pointer;
+  height: 40px;
+  width: 100px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  color: #fff;
+  font-size: 14px;
+  border-radius: 20px;
+  background-color: #181818;
+  border-color: #fff;
+  border-width: 1px;
+}

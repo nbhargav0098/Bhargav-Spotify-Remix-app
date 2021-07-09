@@ -1,0 +1,10 @@
+.specific-category-song-container {
+  height: 180px;
+  width: 180px;
+  margin: 10px;
+}
+.specific-category-img {
+  height: 180px;
+  width: 180px;
+  border-radius: 10px;
+}
