@@ -3,12 +3,13 @@
   min-height: 100vh;
   display: flex;
 }
-.musicpage-content-container {
+.music-main-content-container {
   display: flex;
   flex-direction: column;
   padding-top: 50px;
   margin-left: 70px;
   width: 85%;
+  margin-left: 40px;
 }
 .your-music-heading {
   color: #fff;

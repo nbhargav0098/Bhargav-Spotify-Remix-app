@@ -1,5 +1,7 @@
 import {Component} from 'react'
+import {Link} from 'react-router-dom'
 import SideNavBar from '../SideNavBar'
+import BackArrow from '../BackArrow'
 import './index.css'
 
 class Profile extends Component {
@@ -35,26 +37,31 @@ class Profile extends Component {
     return (
       <div className="profile-bg-container">
         <SideNavBar />
-        <div className="profile-content-container">
-          <img
-            src="https://res.cloudinary.com/dnjj1m9j1/image/upload/v1625819075/Group_1_fu6cgn.png"
-            className="profile-pick"
-            alt="profilePick"
-          />
-          <h1 className="user-name">{userDetails.display_name}</h1>
-          <div className="followers-playlist-container">
-            <div className="followers-container">
-              <p className="followers-count">{followers}</p>
-              <p className="followers-heading">Followers</p>
+        <div className="categories-content-container">
+          <Link to="/">
+            <BackArrow />
+          </Link>
+          <div className="profile-content-container">
+            <img
+              src="https://res.cloudinary.com/dnjj1m9j1/image/upload/v1625819075/Group_1_fu6cgn.png"
+              className="profile-pick"
+              alt="profilePick"
+            />
+            <h1 className="user-name">{userDetails.display_name}</h1>
+            <div className="followers-playlist-container">
+              <div className="followers-container">
+                <p className="followers-count">{followers}</p>
+                <p className="followers-heading">Followers</p>
+              </div>
             </div>
+            <button
+              type="button"
+              className="logout-btn"
+              onClick={this.logoutFromAccount}
+            >
+              Logout
+            </button>
           </div>
-          <button
-            type="button"
-            className="logout-btn"
-            onClick={this.logoutFromAccount}
-          >
-            Logout
-          </button>
         </div>
       </div>
     )

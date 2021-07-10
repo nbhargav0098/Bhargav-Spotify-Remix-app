@@ -8,6 +8,7 @@ const SpecificPlayListSongDetails = props => {
     const seconds = ((millisec % 60000) / 1000).toFixed(0)
     return `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`
   }
+
   const duration = getProperDuration(playListTrackDetails.track.duration_ms)
   return (
     <li className="lists-container">

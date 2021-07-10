@@ -1,4 +1,6 @@
 import {Component} from 'react'
+import {Link} from 'react-router-dom'
+import BackArrow from '../BackArrow'
 import SideNavBar from '../SideNavBar'
 import SpecificYourPlayList from '../SpecificYourPlayList'
 import './index.css'
@@ -40,15 +42,20 @@ class PlayLists extends Component {
     return (
       <div className="playlist-page-bg-container">
         <SideNavBar />
-        <div className="playlist-content-container">
-          <h1 className="your-playlists-heading">Your Playlists</h1>
-          <div className="your-play-list-group-container">
-            {myPlayLists.map(eachYourPlayList => (
-              <SpecificYourPlayList
-                eachPlayListContent={eachYourPlayList}
-                key={eachYourPlayList.name}
-              />
-            ))}
+        <div className="categories-content-container">
+          <Link to="/">
+            <BackArrow />
+          </Link>
+          <div className="playlist-content-container">
+            <h1 className="your-playlists-heading">Your Playlists</h1>
+            <div className="your-play-list-group-container">
+              {myPlayLists.map(eachYourPlayList => (
+                <SpecificYourPlayList
+                  eachPlayListContent={eachYourPlayList}
+                  key={eachYourPlayList.name}
+                />
+              ))}
+            </div>
           </div>
         </div>
       </div>

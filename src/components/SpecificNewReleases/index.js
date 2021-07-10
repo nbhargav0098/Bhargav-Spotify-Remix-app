@@ -34,13 +34,10 @@ class SpecificNewReleases extends Component {
     )
     const specificNewReleasesDataDetails = await specificNewReleasesDataResponse.json()
 
-    const specificNewReleasesPosterUrl =
-      specificNewReleasesDataDetails.images[0].url
-    const specificNewReleasesSongs = specificNewReleasesDataDetails.tracks.items
     this.setState({
       specificNewReleasesDetails: specificNewReleasesDataDetails,
-      specificNewReleasesPoster: specificNewReleasesPosterUrl,
-      specificNewReleasesItems: specificNewReleasesSongs,
+      specificNewReleasesPoster: specificNewReleasesDataDetails.images[0].url,
+      specificNewReleasesItems: specificNewReleasesDataDetails.tracks.items,
     })
   }
 

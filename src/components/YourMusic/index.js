@@ -1,4 +1,6 @@
 import {Component} from 'react'
+import {Link} from 'react-router-dom'
+import BackArrow from '../BackArrow'
 import SideNavBar from '../SideNavBar'
 import YourMusicList from '../YourMusicList'
 import './index.css'
@@ -29,7 +31,10 @@ class YourMusic extends Component {
     return (
       <div className="music-page-bg-container">
         <SideNavBar />
-        <div className="musicpage-content-container">
+        <div className="music-main-content-container">
+          <Link to="/">
+            <BackArrow />
+          </Link>
           <ul>
             <h1 className="your-music-heading">Your Music</h1>
             {yourMusicData.map(eachMusicData => (

@@ -26,19 +26,15 @@ class SpecificPlayList extends Component {
     }
     const specificPlayListResponse = await fetch(specificPlayListApi, options)
     const specificPlayListDetails = await specificPlayListResponse.json()
-
-    const getPlayListPosterUrl = specificPlayListDetails.images[0].url
-    const getPlayListSongs = specificPlayListDetails.tracks.items
     this.setState({
       playListDetails: specificPlayListDetails,
-      playListPoster: getPlayListPosterUrl,
-      playListTrackItems: getPlayListSongs,
+      playListPoster: specificPlayListDetails.images[0].url,
+      playListTrackItems: specificPlayListDetails.tracks.items,
     })
   }
 
   render() {
     const {playListDetails, playListPoster, playListTrackItems} = this.state
-    console.log(playListTrackItems)
     return (
       <div className="specific-players-list-bg-container">
         <SideNavBar />

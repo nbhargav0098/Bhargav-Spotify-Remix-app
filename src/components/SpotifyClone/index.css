@@ -2,6 +2,7 @@
   background-color: #181818;
   min-height: 100vh;
   display: flex;
+  padding-bottom: 40px;
 }
 .homepage-content-container {
   display: flex;
