@@ -26,13 +26,18 @@
   align-items: center;
   height: 100px;
 }
+.route-container-profile:active {
+  background-color: #181818;
+}
 .route-container-home {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100px;
-  background-color: #181818;
+}
+.route-container-home:hover {
+  opacity: 0.5;
 }
 .route-container-music {
   display: flex;
@@ -41,12 +46,18 @@
   align-items: center;
   height: 100px;
 }
+.route-container-music:hover {
+  opacity: 0.5;
+}
 .route-container-playlist {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100px;
+}
+.route-container-playlist:hover {
+  opacity: 0.5;
 }
 .nav-name {
   color: #9b9b9b;

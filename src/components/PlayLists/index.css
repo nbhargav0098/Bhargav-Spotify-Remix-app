@@ -1,0 +1,20 @@
+.playlist-page-bg-container {
+  background-color: #181818;
+  min-height: 100vh;
+  display: flex;
+}
+.playlist-content-container {
+  display: flex;
+  flex-direction: column;
+  padding-top: 50px;
+  margin-left: 70px;
+  width: 85%;
+}
+.your-playlists-heading {
+  color: #fff;
+  font-size: 20px;
+}
+.your-play-list-group-container {
+  display: flex;
+  flex-wrap: wrap;
+}

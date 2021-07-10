@@ -6,6 +6,8 @@ import ProtectedRoute from './components/ProtectedRoute'
 import Profile from './components/Profile'
 import Categories from './components/Categories'
 import SpecificNewReleases from './components/SpecificNewReleases'
+import YourMusic from './components/YourMusic'
+import PlayLists from './components/PlayLists'
 
 import './App.css'
 
@@ -26,6 +28,8 @@ const App = () => (
         path="/specificNewReleases/:id"
         component={SpecificNewReleases}
       />
+      <ProtectedRoute exact path="/YourMusic" component={YourMusic} />
+      <ProtectedRoute exact path="/PlayLists/" component={PlayLists} />
     </Switch>
   </BrowserRouter>
 )

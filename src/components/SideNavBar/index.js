@@ -45,26 +45,30 @@ class SideNavBar extends Component {
               <p className="nav-name">Home</p>
             </div>
           </Link>
-          <div className="route-container-music">
-            <IconContext.Provider
-              value={{style: {fontSize: '32px', color: '#9B9B9B'}}}
-            >
-              <div>
-                <FaMusic />
-              </div>
-            </IconContext.Provider>
-            <p className="nav-name">Your Music</p>
-          </div>
-          <div className="route-container-playlist">
-            <IconContext.Provider
-              value={{style: {fontSize: '35px', color: '#9B9B9B'}}}
-            >
-              <div>
-                <RiPlayListFill />
-              </div>
-            </IconContext.Provider>
-            <p className="nav-name">PlayLists</p>
-          </div>
+          <Link to="/YourMusic">
+            <div className="route-container-music">
+              <IconContext.Provider
+                value={{style: {fontSize: '32px', color: '#9B9B9B'}}}
+              >
+                <div>
+                  <FaMusic />
+                </div>
+              </IconContext.Provider>
+              <p className="nav-name">Your Music</p>
+            </div>
+          </Link>
+          <Link to="/PlayLists/">
+            <div className="route-container-playlist">
+              <IconContext.Provider
+                value={{style: {fontSize: '35px', color: '#9B9B9B'}}}
+              >
+                <div>
+                  <RiPlayListFill />
+                </div>
+              </IconContext.Provider>
+              <p className="nav-name">PlayLists</p>
+            </div>
+          </Link>
         </div>
       </div>
     )

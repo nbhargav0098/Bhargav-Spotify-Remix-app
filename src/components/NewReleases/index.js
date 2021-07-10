@@ -20,9 +20,9 @@ class NewReleases extends Component {
       method: 'GET',
     }
     const userNewReleasesResponse = await fetch(newReleasesapiUrl, options)
-    const userNewReleaseskDetails = await userNewReleasesResponse.json()
+    const userNewReleasesDetails = await userNewReleasesResponse.json()
     this.setState({
-      newReleasesData: userNewReleaseskDetails.albums.items,
+      newReleasesData: userNewReleasesDetails.albums.items,
     })
   }
 

@@ -1,0 +1,17 @@
+.music-page-bg-container {
+  background-color: #181818;
+  min-height: 100vh;
+  display: flex;
+}
+.musicpage-content-container {
+  display: flex;
+  flex-direction: column;
+  padding-top: 50px;
+  margin-left: 70px;
+  width: 85%;
+}
+.your-music-heading {
+  color: #fff;
+  font-size: 24px;
+  margin-bottom: 40px;
+}

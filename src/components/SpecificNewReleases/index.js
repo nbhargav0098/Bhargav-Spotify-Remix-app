@@ -1,5 +1,6 @@
 import {Component} from 'react'
 import {Link} from 'react-router-dom'
+import SpecificNewReleaseSongDetails from '../SpecificNewReleaseSongDetails'
 import BackArrow from '../BackArrow'
 import './index.css'
 import SideNavBar from '../SideNavBar'
@@ -8,7 +9,7 @@ class SpecificNewReleases extends Component {
   state = {
     specificNewReleasesDetails: [],
     specificNewReleasesPoster: '',
-    /* specificNewReleasesItems: [], */
+    specificNewReleasesItems: [],
   }
 
   componentDidMount() {
@@ -19,7 +20,7 @@ class SpecificNewReleases extends Component {
     const {match} = this.props
     const {params} = match
     const {id} = params
-    const specificPlayListApi = `https://api.spotify.com/v1/albums/${id}`
+    const specificNewReleasesApi = `https://api.spotify.com/v1/albums/${id}`
     const token = localStorage.getItem('pa_token', '')
     const options = {
       headers: {
@@ -28,18 +29,18 @@ class SpecificNewReleases extends Component {
       method: 'GET',
     }
     const specificNewReleasesDataResponse = await fetch(
-      specificPlayListApi,
+      specificNewReleasesApi,
       options,
     )
     const specificNewReleasesDataDetails = await specificNewReleasesDataResponse.json()
 
     const specificNewReleasesPosterUrl =
       specificNewReleasesDataDetails.images[0].url
-    /* const specificNewReleasesSongs = specificNewReleasesDataDetails.tracks.items */
+    const specificNewReleasesSongs = specificNewReleasesDataDetails.tracks.items
     this.setState({
       specificNewReleasesDetails: specificNewReleasesDataDetails,
       specificNewReleasesPoster: specificNewReleasesPosterUrl,
-      /* specificNewReleasesItems: specificNewReleasesSongs, */
+      specificNewReleasesItems: specificNewReleasesSongs,
     })
   }
 
@@ -47,9 +48,8 @@ class SpecificNewReleases extends Component {
     const {
       specificNewReleasesDetails,
       specificNewReleasesPoster,
-      /* specificNewReleasesItems, */
+      specificNewReleasesItems,
     } = this.state
-    console.log(specificNewReleasesDetails)
     return (
       <div className="specific-new-releases-bg-container">
         <SideNavBar />
@@ -71,6 +71,25 @@ class SpecificNewReleases extends Component {
                 {specificNewReleasesDetails.description}
               </p>
             </div>
+          </div>
+          <div className="specific-new-songs-container">
+            <div className="specific-new-list-titles-container">
+              <div className="new-titles-container">
+                <p className="specific-new-list-titles">Track</p>
+              </div>
+              <div className="new-titles-container">
+                <p className="specific-new-list-titles">Time</p>
+              </div>
+            </div>
+            <hr className="line" />
+            <ol className="new-ordered-list-items">
+              {specificNewReleasesItems.map(eachNewReleaseItem => (
+                <SpecificNewReleaseSongDetails
+                  newReleaseTrackDetails={eachNewReleaseItem}
+                  key={eachNewReleaseItem.track_number}
+                />
+              ))}
+            </ol>
           </div>
         </div>
       </div>

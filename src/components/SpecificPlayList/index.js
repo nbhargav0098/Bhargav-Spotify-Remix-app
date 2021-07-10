@@ -38,6 +38,7 @@ class SpecificPlayList extends Component {
 
   render() {
     const {playListDetails, playListPoster, playListTrackItems} = this.state
+    console.log(playListTrackItems)
     return (
       <div className="specific-players-list-bg-container">
         <SideNavBar />
@@ -81,7 +82,7 @@ class SpecificPlayList extends Component {
               {playListTrackItems.map(eachItem => (
                 <SpecificPlayListSongDetails
                   playListTrackDetails={eachItem}
-                  key={eachItem.id}
+                  key={eachItem.track.name}
                 />
               ))}
             </ol>

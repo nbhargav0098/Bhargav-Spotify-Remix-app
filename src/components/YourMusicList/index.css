@@ -1,0 +1,31 @@
+.your-music-list {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.music-content {
+  display: flex;
+}
+.music-poster {
+  height: 80px;
+  width: 80px;
+}
+.music-track-details {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+}
+.music-track-title {
+  font-size: 15px;
+  color: #fff;
+}
+.artists {
+  color: #9b9b9b;
+  font-size: 12px;
+}
+.time-duration {
+  color: #9b9b9b;
+  font-size: 12px;
+}

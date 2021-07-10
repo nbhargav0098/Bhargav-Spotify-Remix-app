@@ -3,6 +3,12 @@ import './index.css'
 
 const SpecificPlayListSongDetails = props => {
   const {playListTrackDetails} = props
+  function getProperDuration(millisec) {
+    const minutes = Math.floor(millisec / 60000)
+    const seconds = ((millisec % 60000) / 1000).toFixed(0)
+    return `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`
+  }
+  const duration = getProperDuration(playListTrackDetails.track.duration_ms)
   return (
     <li className="lists-container">
       <div className="track-container">
@@ -12,9 +18,7 @@ const SpecificPlayListSongDetails = props => {
         <p className="album-name">{playListTrackDetails.track.album.name}</p>
       </div>
       <div className="track-container">
-        <p className="track-duration">
-          {playListTrackDetails.track.duration_ms}
-        </p>
+        <p className="track-duration">{duration}</p>
       </div>
       <div className="track-container">
         <p className="track-artists">

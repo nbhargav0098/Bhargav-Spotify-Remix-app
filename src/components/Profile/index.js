@@ -32,7 +32,6 @@ class Profile extends Component {
 
   render() {
     const {userDetails, followers} = this.state
-    console.log(userDetails)
     return (
       <div className="profile-bg-container">
         <SideNavBar />

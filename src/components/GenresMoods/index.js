@@ -27,6 +27,7 @@ class GenresMoods extends Component {
 
   render() {
     const {genresMoodsData} = this.state
+    console.log(genresMoodsData)
     return (
       <div className="geners-mood-bg-container">
         <h1 className="title">Genres & Moods</h1>
