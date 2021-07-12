@@ -1,0 +1,40 @@
+.music-player-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 80px;
+  background-color: #000;
+  padding-left: 10px;
+  padding-right: 50px;
+  position: fixed;
+  bottom: 0;
+}
+.music-heading {
+  color: #fff;
+  font-size: 12px;
+}
+.playing-album-container {
+  display: flex;
+}
+.song-img {
+  height: 60px;
+}
+.song-name-artist {
+  margin-left: 10px;
+}
+.music-player-artist {
+  color: #fff;
+  font-size: 10px;
+}
+.music-player-song {
+  color: #fff;
+  font-size: 10px;
+}
+.music-bar {
+  background-color: #000;
+  align-self: center;
+}
+.audio-player {
+  padding-right: 40px;
+}

@@ -24,6 +24,7 @@ class PlayLists extends Component {
     const userDataResponse = await fetch(apiUrl, options)
     const userResponseData = await userDataResponse.json()
     const username = userResponseData.id
+    console.log(username)
     const playListsApi = `https://api.spotify.com/v1/users/${username}/playlists?limit=50`
     const newToken = localStorage.getItem('pa_token', '')
     const option = {

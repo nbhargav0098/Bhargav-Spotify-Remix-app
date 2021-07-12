@@ -1,17 +1,17 @@
 .specific-players-list-bg-container {
   background-color: #181818;
-  min-height: 100vh;
   display: flex;
 }
 .specific-players-list-content-container {
-  display: column;
+  display: flex;
+  flex-direction: column;
   padding-top: 30px;
-  margin-left: 40px;
-  width: 90%;
+  width: 100%;
 }
 .top-part {
   display: flex;
   height: 270px;
+  margin-left: 40px;
 }
 .poster-props {
   height: 270px;
@@ -38,6 +38,7 @@
 }
 .specific-play-list-songs-container {
   margin-top: 20px;
+  margin-left: 40px;
 }
 
 .specific-play-list-titles-container {
@@ -59,4 +60,9 @@
   color: #fff;
   font-size: 12px;
   padding-bottom: 40px;
+}
+.bottom-music-player {
+  position: fixed;
+  left: 0;
+  bottom: 0;
 }

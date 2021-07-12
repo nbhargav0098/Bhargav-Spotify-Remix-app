@@ -4,9 +4,15 @@ import BackArrow from '../BackArrow'
 import SpecificPlayListSongDetails from '../SpecificPlayListSongDetails'
 import './index.css'
 import SideNavBar from '../SideNavBar'
+import MusicPlayer from '../MusicPlayer'
 
 class SpecificPlayList extends Component {
-  state = {playListDetails: [], playListPoster: '', playListTrackItems: []}
+  state = {
+    playListDetails: [],
+    playListPoster: '',
+    playListTrackItems: [],
+    songUniqueId: '',
+  }
 
   componentDidMount() {
     this.getSpecificPlayListData()
@@ -33,8 +39,17 @@ class SpecificPlayList extends Component {
     })
   }
 
+  getSpecificSongId = uniqueId => {
+    this.setState({songUniqueId: uniqueId})
+  }
+
   render() {
-    const {playListDetails, playListPoster, playListTrackItems} = this.state
+    const {
+      playListDetails,
+      playListPoster,
+      playListTrackItems,
+      songUniqueId,
+    } = this.state
     return (
       <div className="specific-players-list-bg-container">
         <SideNavBar />
@@ -74,15 +89,22 @@ class SpecificPlayList extends Component {
               </div>
             </div>
             <hr className="line" />
-            <ol className="ordered-list-items">
+            <div className="ordered-list-items">
               {playListTrackItems.map(eachItem => (
                 <SpecificPlayListSongDetails
                   playListTrackDetails={eachItem}
                   key={eachItem.track.name}
+                  getSpecificSongId={this.getSpecificSongId}
                 />
               ))}
-            </ol>
+            </div>
           </div>
+          {songUniqueId !== '' && (
+            <MusicPlayer
+              songsUniqueId={songUniqueId}
+              className="bottom-music-player"
+            />
+          )}
         </div>
       </div>
     )

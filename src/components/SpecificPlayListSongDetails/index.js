@@ -2,16 +2,19 @@ import moment from 'moment'
 import './index.css'
 
 const SpecificPlayListSongDetails = props => {
-  const {playListTrackDetails} = props
+  const {playListTrackDetails, getSpecificSongId} = props
   function getProperDuration(millisec) {
     const minutes = Math.floor(millisec / 60000)
     const seconds = ((millisec % 60000) / 1000).toFixed(0)
     return `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`
   }
+  const onClickSpecifiSong = () => {
+    getSpecificSongId(playListTrackDetails)
+  }
 
   const duration = getProperDuration(playListTrackDetails.track.duration_ms)
   return (
-    <li className="lists-container">
+    <li className="lists-container" onClick={onClickSpecifiSong}>
       <div className="track-container">
         <p className="track-name">{playListTrackDetails.track.name}</p>
       </div>
