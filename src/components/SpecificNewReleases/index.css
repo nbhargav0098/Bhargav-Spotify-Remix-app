@@ -6,12 +6,12 @@
 .specific-new-releases-content-container {
   display: column;
   padding-top: 30px;
-  margin-left: 40px;
   width: 90%;
 }
 .new-releases-top-part {
   display: flex;
   height: 270px;
+  margin-left: 40px;
 }
 .new-releases-poster-props {
   height: 270px;
@@ -35,13 +35,13 @@
 }
 .specific-new-songs-container {
   margin-top: 20px;
+  margin-left: 40px;
 }
 
 .specific-new-list-titles-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-left: 33px;
   padding-right: 60px;
 }
 .specific-new-list-titles {
@@ -60,4 +60,5 @@
   color: #475569;
   border-width: 0.5px;
   background-color: #475569;
+  margin-right: 90px;
 }

@@ -8,13 +8,13 @@ const SpecificPlayListSongDetails = props => {
     const seconds = ((millisec % 60000) / 1000).toFixed(0)
     return `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`
   }
-  const onClickSpecifiSong = () => {
+  const onClickSpecificSong = () => {
     getSpecificSongId(playListTrackDetails)
   }
 
   const duration = getProperDuration(playListTrackDetails.track.duration_ms)
   return (
-    <li className="lists-container" onClick={onClickSpecifiSong}>
+    <li className="lists-container" onClick={onClickSpecificSong}>
       <div className="track-container">
         <p className="track-name">{playListTrackDetails.track.name}</p>
       </div>

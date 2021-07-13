@@ -7,12 +7,13 @@
   display: flex;
   flex-direction: column;
   padding-top: 50px;
-  margin-left: 70px;
-  width: 85%;
-  margin-left: 40px;
+
+  width: 100%;
 }
 .your-music-heading {
   color: #fff;
   font-size: 24px;
-  margin-bottom: 40px;
+}
+.music-page-content {
+  margin-left: 40px;
 }

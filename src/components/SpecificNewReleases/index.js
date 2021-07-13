@@ -4,12 +4,14 @@ import SpecificNewReleaseSongDetails from '../SpecificNewReleaseSongDetails'
 import BackArrow from '../BackArrow'
 import './index.css'
 import SideNavBar from '../SideNavBar'
+import NewReleasesMusicPlayer from '../NewReleasesMusicPlayer'
 
 class SpecificNewReleases extends Component {
   state = {
     specificNewReleasesDetails: [],
     specificNewReleasesPoster: '',
     specificNewReleasesItems: [],
+    specificSongDetails: '',
   }
 
   componentDidMount() {
@@ -33,7 +35,6 @@ class SpecificNewReleases extends Component {
       options,
     )
     const specificNewReleasesDataDetails = await specificNewReleasesDataResponse.json()
-
     this.setState({
       specificNewReleasesDetails: specificNewReleasesDataDetails,
       specificNewReleasesPoster: specificNewReleasesDataDetails.images[0].url,
@@ -41,11 +42,17 @@ class SpecificNewReleases extends Component {
     })
   }
 
+  getSpecificSongDetails = (albumPoster, uniqueDetails) => {
+    const albumDetails = {albumPoster, uniqueDetails}
+    this.setState({specificSongDetails: albumDetails})
+  }
+
   render() {
     const {
       specificNewReleasesDetails,
       specificNewReleasesPoster,
       specificNewReleasesItems,
+      specificSongDetails,
     } = this.state
     return (
       <div className="specific-new-releases-bg-container">
@@ -79,15 +86,23 @@ class SpecificNewReleases extends Component {
               </div>
             </div>
             <hr className="line" />
-            <ol className="new-ordered-list-items">
+            <div className="new-ordered-list-items">
               {specificNewReleasesItems.map(eachNewReleaseItem => (
                 <SpecificNewReleaseSongDetails
                   newReleaseTrackDetails={eachNewReleaseItem}
+                  commonPosters={specificNewReleasesPoster}
+                  getSpecificSongDetails={this.getSpecificSongDetails}
                   key={eachNewReleaseItem.track_number}
                 />
               ))}
-            </ol>
+            </div>
           </div>
+          {specificSongDetails !== '' && (
+            <NewReleasesMusicPlayer
+              songsUniqueDetails={specificSongDetails}
+              className="bottom-music-player"
+            />
+          )}
         </div>
       </div>
     )

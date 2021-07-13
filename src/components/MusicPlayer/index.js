@@ -18,12 +18,7 @@ const MusicPlayer = props => {
         </div>
       </div>
       <div className="audio-player">
-        <ReactAudioPlayer
-          src={audioTrack}
-          autoPlay
-          controls
-          className="music-bar"
-        />
+        <ReactAudioPlayer src={audioTrack} autoPlay controls />
       </div>
     </div>
   )

@@ -3,10 +3,11 @@ import {Link} from 'react-router-dom'
 import BackArrow from '../BackArrow'
 import SideNavBar from '../SideNavBar'
 import YourMusicList from '../YourMusicList'
+import MusicPlayer from '../MusicPlayer'
 import './index.css'
 
 class YourMusic extends Component {
-  state = {yourMusicData: []}
+  state = {yourMusicData: [], songUniqueId: ''}
 
   componentDidMount() {
     this.getInfo()
@@ -26,8 +27,12 @@ class YourMusic extends Component {
     this.setState({yourMusicData: yourMusicResponseData.items})
   }
 
+  getSpecificSongId = uniqueId => {
+    this.setState({songUniqueId: uniqueId})
+  }
+
   render() {
-    const {yourMusicData} = this.state
+    const {yourMusicData, songUniqueId} = this.state
     return (
       <div className="music-page-bg-container">
         <SideNavBar />
@@ -35,15 +40,22 @@ class YourMusic extends Component {
           <Link to="/">
             <BackArrow />
           </Link>
-          <ul>
+          <div className="music-page-content">
             <h1 className="your-music-heading">Your Music</h1>
             {yourMusicData.map(eachMusicData => (
               <YourMusicList
                 musicDetails={eachMusicData}
                 key={eachMusicData.track.id}
+                getSpecificSongId={this.getSpecificSongId}
               />
             ))}
-          </ul>
+          </div>
+          {songUniqueId !== '' && (
+            <MusicPlayer
+              songsUniqueId={songUniqueId}
+              className="bottom-music-player"
+            />
+          )}
         </div>
       </div>
     )
