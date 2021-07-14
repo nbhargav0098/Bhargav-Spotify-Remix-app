@@ -37,7 +37,7 @@ class YourMusic extends Component {
       <div className="music-page-bg-container">
         <SideNavBar />
         <div className="music-main-content-container">
-          <Link to="/">
+          <Link to="/" className="link">
             <BackArrow />
           </Link>
           <div className="music-page-content">

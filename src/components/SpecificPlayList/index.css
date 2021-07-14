@@ -35,6 +35,7 @@
 }
 .line {
   color: #475569;
+  width: 100%;
 }
 .specific-play-list-songs-container {
   margin-top: 20px;
@@ -45,7 +46,6 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-left: 33px;
   padding-right: 30px;
 }
 .specific-play-list-titles {
@@ -65,4 +65,5 @@
   position: fixed;
   left: 0;
   bottom: 0;
+  background-color: #181818;
 }

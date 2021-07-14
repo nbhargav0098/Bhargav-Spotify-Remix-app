@@ -3,7 +3,6 @@ import './index.css'
 
 const MusicPlayer = props => {
   const {songsUniqueId} = props
-  console.log(songsUniqueId)
   const songImg = songsUniqueId.track.album.images[2].url
   const trackName = songsUniqueId.track.name
   const artistName = songsUniqueId.track.artists[0].name

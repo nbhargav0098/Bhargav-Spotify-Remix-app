@@ -25,9 +25,10 @@
   justify-content: center;
   align-items: center;
   height: 100px;
+  background-color: #040306;
 }
 .route-container-profile:hover {
-  background-color: #181818;
+  opacity: 0.5;
 }
 .route-container-home {
   display: flex;
@@ -35,6 +36,7 @@
   justify-content: center;
   align-items: center;
   height: 100px;
+  background-color: #040306;
 }
 .route-container-home:hover {
   opacity: 0.5;
@@ -45,6 +47,7 @@
   justify-content: center;
   align-items: center;
   height: 100px;
+  background-color: #040306;
 }
 .route-container-music:hover {
   opacity: 0.5;
@@ -55,6 +58,7 @@
   justify-content: center;
   align-items: center;
   height: 100px;
+  background-color: #040306;
 }
 .route-container-playlist:hover {
   opacity: 0.5;
